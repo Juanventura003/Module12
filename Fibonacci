@@ -1,7 +1,6 @@
 //recursive approach
 
 public class Fibonacci {
-    // Recursive Fibonacci function
     public static int fibonacciRecursive(int n) {
         if (n <= 1) {
             return n;
@@ -21,7 +20,6 @@ public class Fibonacci {
 
 
 public class Fibonacci {
-    // Iterative Fibonacci function
     public static int fibonacciIterative(int n) {
         if (n <= 1) {
             return n;
