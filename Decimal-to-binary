@@ -1,0 +1,39 @@
+//Recursive approach
+
+public class DecimalToBinary {
+    public static String decimalToBinaryRecursive(int n) {
+        if (n == 0) {
+            return "";
+        } else {
+            return decimalToBinaryRecursive(n / 2) + (n % 2);
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 10; // Decimal number to convert
+        String binary = decimalToBinaryRecursive(n);
+        System.out.println("Decimal " + n + " to binary (recursive): " + (binary.isEmpty() ? "0" : binary));
+    }
+}
+
+
+// iterative approach
+
+public class DecimalToBinary {
+    public static String decimalToBinaryIterative(int n) {
+        if (n == 0) {
+            return "0";
+        }
+        StringBuilder binary = new StringBuilder();
+        while (n > 0) {
+            binary.insert(0, n % 2);
+            n = n / 2;
+        }
+        return binary.toString();
+    }
+
+    public static void main(String[] args) {
+        int n = 10; // Decimal number to convert
+        System.out.println("Decimal " + n + " to binary (iterative): " + decimalToBinaryIterative(n));
+    }
+}
